@@ -3,6 +3,9 @@ import { StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+
+import RegisterPhone from "./src/screens/RegisterPhone";
+import SplashScreen from "./src/screens/SplashScreen";
 import store from "./src/redux/store";
 
 const Stack = createStackNavigator();
@@ -13,7 +16,12 @@ const Router = () => {
       <Stack.Screen
         component={SplashScreen}
         name={"SplashScreen"}
-        option={{ headerShown: false }}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={RegisterPhone}
+        name={"RegisterPhone"}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );
