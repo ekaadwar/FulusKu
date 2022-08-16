@@ -1,26 +1,38 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import store from "./src/redux/store";
 
-function App() {
+const Stack = createStackNavigator();
+
+const Router = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        component={SplashScreen}
+        name={"SplashScreen"}
+        option={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+const MainApp = () => {
+  return (
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
+  );
+};
+
+const App = () => {
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View>
+      <MainApp />
     </Provider>
   );
-}
+};
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#3CB8EB",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
