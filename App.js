@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import Intro from "./src/screens/Intro";
+import Login from "./src/screens/Login";
 import RegisterPhone from "./src/screens/RegisterPhone";
 import SplashScreen from "./src/screens/SplashScreen";
 import store from "./src/redux/store";
@@ -15,6 +16,16 @@ const Router = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        component={Login}
+        name={"Login"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={RegisterPhone}
+        name={"RegisterPhone"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
         component={Intro}
         name={"Intro"}
         options={{ headerShown: false }}
@@ -22,11 +33,6 @@ const Router = () => {
       <Stack.Screen
         component={SplashScreen}
         name={"SplashScreen"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={RegisterPhone}
-        name={"RegisterPhone"}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
