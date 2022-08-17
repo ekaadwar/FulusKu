@@ -1,7 +1,7 @@
 import React from "react";
 import { TextInput, StyleSheet } from "react-native";
 
-const MainInput = ({ placeholder = "Input your data" }) => {
+const MainInput = ({ numeric = false, placeholder = "Input your data" }) => {
   const styles = StyleSheet.create({
     input: {
       color: "#FFF",
@@ -11,7 +11,13 @@ const MainInput = ({ placeholder = "Input your data" }) => {
       borderBottomColor: "#FFF",
     },
   });
-  return <TextInput style={styles.input} placeholder={placeholder} />;
+  return (
+    <TextInput
+      style={styles.input}
+      placeholder={placeholder}
+      keyboardType={numeric ? "numeric" : "default"}
+    />
+  );
 };
 
 export default MainInput;

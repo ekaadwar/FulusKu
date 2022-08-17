@@ -6,6 +6,9 @@ const Button = ({ primary = false, text = "Text", onPress = () => {} }) => {
   if (primary) {
   }
   const styles = StyleSheet.create({
+    buttonWrap: {
+      alignItems: "center",
+    },
     primaryParent: {
       backgroundColor: "#FFF",
       shadowColor: "#2A86AC",
@@ -27,18 +30,20 @@ const Button = ({ primary = false, text = "Text", onPress = () => {} }) => {
     },
   });
   return (
-    <TouchableOpacity onPress={onPress}>
-      <View
-        style={[
-          GeneralStyle.button,
-          primary ? styles.primaryParent : styles.secondParent,
-        ]}
-      >
-        <Text style={primary ? styles.primaryText : styles.secondText}>
-          {text}
-        </Text>
-      </View>
-    </TouchableOpacity>
+    <View style={styles.buttonWrap}>
+      <TouchableOpacity onPress={onPress}>
+        <View
+          style={[
+            GeneralStyle.button,
+            primary ? styles.primaryParent : styles.secondParent,
+          ]}
+        >
+          <Text style={primary ? styles.primaryText : styles.secondText}>
+            {text}
+          </Text>
+        </View>
+      </TouchableOpacity>
+    </View>
   );
 };
 
