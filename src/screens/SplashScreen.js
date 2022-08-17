@@ -1,28 +1,21 @@
 import React, { useEffect } from "react";
 import { Image, StatusBar, StyleSheet, Text, View } from "react-native";
+
 import { logo } from "../assets/index";
+import { GeneralStyle } from "../components/GeneralStyles";
 
 const SplashScreen = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace("RegisterPhone");
-    }, 2000);
+      navigation.replace("Intro");
+    }, 3000);
   });
 
   return (
-    <View style={styles.container}>
+    <View style={GeneralStyle.parent}>
       <Image source={logo} />
     </View>
   );
 };
 
 export default SplashScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#3CB8EB",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
