@@ -14,6 +14,9 @@ export const GeneralStyle = StyleSheet.create({
     flex: 1,
     backgroundColor: "#3CB8EB",
   },
+  headerPadding: {
+    paddingTop: 60,
+  },
   container: {
     paddingHorizontal: 20,
     height: "100%",
@@ -26,5 +29,9 @@ export const GeneralStyle = StyleSheet.create({
     justifyContent: "center",
     width: "auto",
     borderRadius: 5,
+  },
+  titleScreen: {
+    color: "#FFF",
+    fontSize: 20,
   },
 });

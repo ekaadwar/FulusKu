@@ -9,6 +9,7 @@ import Login from "./src/screens/Login";
 import RegisterPhone from "./src/screens/RegisterPhone";
 import SplashScreen from "./src/screens/SplashScreen";
 import store from "./src/redux/store";
+import Header from "./src/components/Header";
 
 const Stack = createStackNavigator();
 
@@ -16,13 +17,16 @@ const Router = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        component={Login}
-        name={"Login"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
         component={RegisterPhone}
         name={"RegisterPhone"}
+        options={{
+          header: Header,
+          headerTransparent: true,
+        }}
+      />
+      <Stack.Screen
+        component={Login}
+        name={"Login"}
         options={{ headerShown: false }}
       />
       <Stack.Screen
