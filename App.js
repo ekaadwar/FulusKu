@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import Intro from "./src/screens/Intro";
 import Login from "./src/screens/Login";
+import RegisterCode from "./src/screens/RegisterCode";
 import RegisterPhone from "./src/screens/RegisterPhone";
 import SplashScreen from "./src/screens/SplashScreen";
 import store from "./src/redux/store";
@@ -16,6 +17,14 @@ const Stack = createStackNavigator();
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        component={RegisterCode}
+        name={"RegisterCode"}
+        options={{
+          header: Header,
+          headerTransparent: true,
+        }}
+      />
       <Stack.Screen
         component={RegisterPhone}
         name={"RegisterPhone"}
