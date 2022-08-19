@@ -2,28 +2,33 @@ import React from "react";
 import { Modal, View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { GeneralStyle } from "./GeneralStyles";
 import Header from "./Header";
+import SpaceHorizontal from "./SpaceHorizontal";
 
 const ModalOptions = ({
-  header = () => {},
   animationType = "fade",
-  modalVisibility = false,
+  visibility = false,
+  setVisibility = () => {},
   options = [],
 }) => {
   return (
     <Modal
       animationType={animationType}
       transparent={true}
-      visible={modalVisibility}
+      visible={visibility}
     >
       <View style={GeneralStyle.parentTop}>
-        {header}
-        <View>
+        <Header action={setVisibility} title="Select question" />
+        <SpaceHorizontal space={30} />
+        <View style={GeneralStyle.container}>
           {options.map((option, idx) => (
-            <TouchableOpacity key={idx}>
-              <View>
-                <Text>{option}</Text>
-              </View>
-            </TouchableOpacity>
+            <View>
+              <TouchableOpacity key={idx}>
+                <View style={styles.optionWrap}>
+                  <Text style={GeneralStyle.mainText}>{option}</Text>
+                </View>
+              </TouchableOpacity>
+              <SpaceHorizontal />
+            </View>
           ))}
         </View>
       </View>
@@ -34,13 +39,10 @@ const ModalOptions = ({
 export default ModalOptions;
 
 const styles = StyleSheet.create({
-  options: {
-    height: 40,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+  optionWrap: {
+    paddingVertical: 10,
+    paddingHorizontal: 5,
     borderBottomWidth: 2,
     borderBottomColor: "#FFF",
   },
-  modal: {},
 });

@@ -7,7 +7,7 @@ const Header = ({ action = () => {}, title = "" }) => {
   return (
     <View style={styles.canvas}>
       <View style={[GeneralStyle.container, styles.content]}>
-        <TouchableOpacity onClick={action}>
+        <TouchableOpacity onPress={action}>
           <Icon name="arrow-back" color="#FFF" size={20} />
         </TouchableOpacity>
         <View style={styles.headerWrap}>

@@ -64,12 +64,8 @@ const RegisterPhone = () => {
       </Modal> */}
 
       <ModalOption
-        header={() => (
-          <TouchableOpacity>
-            <Header />
-          </TouchableOpacity>
-        )}
-        modalVisibility={modalVisibility}
+        visibility={modalVisibility}
+        setVisibility={() => setModalVisibility(!modalVisibility)}
         options={secretQuestion}
       />
     </View>
