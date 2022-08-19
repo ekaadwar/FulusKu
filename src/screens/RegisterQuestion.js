@@ -48,21 +48,6 @@ const RegisterPhone = () => {
         <MainButton primary text="IM READY" />
       </View>
 
-      {/* <Modal animationType="fade" transparent={true} visible={modalVisibility}>
-        <View style={[styles.modal, GeneralStyle.parentTop]}>
-          <TouchableOpacity>
-            <Header />
-          </TouchableOpacity>
-          <View>
-            <TouchableOpacity>
-              <View>
-                <Text>Siapa nama gadis ibu kandung Anda?</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal> */}
-
       <ModalOption
         visibility={modalVisibility}
         setVisibility={() => setModalVisibility(!modalVisibility)}

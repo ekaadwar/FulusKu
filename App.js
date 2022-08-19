@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import Intro from "./src/screens/Intro";
 import Login from "./src/screens/Login";
+import RegisterFinish from "./src/screens/RegisterFinish";
 import RegisterAdvance from "./src/screens/RegisterAdvance";
 import RegisterQuestion from "./src/screens/RegisterQuestion";
 import RegisterCode from "./src/screens/RegisterCode";
@@ -19,6 +20,11 @@ const Stack = createStackNavigator();
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        component={RegisterFinish}
+        name={"RegisterFinish"}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         component={RegisterQuestion}
         name={"RegisterQuestion"}
