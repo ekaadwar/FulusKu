@@ -4,6 +4,7 @@ import { GeneralStyle } from "./GeneralStyles";
 import Header from "./Header";
 
 const ModalOptions = ({
+  header = () => {},
   animationType = "fade",
   modalVisibility = false,
   options = [],
@@ -15,9 +16,7 @@ const ModalOptions = ({
       visible={modalVisibility}
     >
       <View style={GeneralStyle.parentTop}>
-        <TouchableOpacity>
-          <Header />
-        </TouchableOpacity>
+        {header}
         <View>
           {options.map((option, idx) => (
             <TouchableOpacity key={idx}>
