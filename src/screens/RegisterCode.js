@@ -15,7 +15,7 @@ const RegisterPhone = () => {
         <SpaceHorizontal space={30} />
 
         <Text style={GeneralStyle.titleScreen}>
-          Enter your code we just sent you vie SMS
+          Enter your code we just sent you vie SMS.
         </Text>
         <SpaceHorizontal space={30} />
 

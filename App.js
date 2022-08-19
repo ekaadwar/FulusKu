@@ -6,6 +6,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import Intro from "./src/screens/Intro";
 import Login from "./src/screens/Login";
+import RegisterAdvance from "./src/screens/RegisterAdvance";
+import RegisterQuestion from "./src/screens/RegisterQuestion";
 import RegisterCode from "./src/screens/RegisterCode";
 import RegisterPhone from "./src/screens/RegisterPhone";
 import SplashScreen from "./src/screens/SplashScreen";
@@ -17,6 +19,22 @@ const Stack = createStackNavigator();
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        component={RegisterQuestion}
+        name={"RegisterQuestion"}
+        options={{
+          header: Header,
+          headerTransparent: true,
+        }}
+      />
+      <Stack.Screen
+        component={RegisterAdvance}
+        name={"RegisterAdvance"}
+        options={{
+          header: Header,
+          headerTransparent: true,
+        }}
+      />
       <Stack.Screen
         component={RegisterCode}
         name={"RegisterCode"}
