@@ -15,12 +15,18 @@ import SplashScreen from "./src/screens/SplashScreen";
 import Home from "./src/screens/Home";
 import store from "./src/redux/store";
 import Header from "./src/components/Header";
+import TransactionHistory from "./src/screens/TransactionHistory";
 
 const Stack = createStackNavigator();
 
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        component={TransactionHistory}
+        name={"TransactionHistory"}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         component={Home}
         name={"Home"}
