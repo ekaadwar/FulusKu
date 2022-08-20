@@ -12,6 +12,7 @@ import RegisterQuestion from "./src/screens/RegisterQuestion";
 import RegisterCode from "./src/screens/RegisterCode";
 import RegisterPhone from "./src/screens/RegisterPhone";
 import SplashScreen from "./src/screens/SplashScreen";
+import Home from "./src/screens/Home";
 import store from "./src/redux/store";
 import Header from "./src/components/Header";
 
@@ -20,6 +21,11 @@ const Stack = createStackNavigator();
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        component={Home}
+        name={"Home"}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         component={SplashScreen}
         name={"SplashScreen"}

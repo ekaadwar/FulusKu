@@ -10,6 +10,9 @@ export const GeneralStyle = StyleSheet.create({
   mainText: {
     color: "#FFF",
   },
+  contentText: {
+    fontWeight: 300,
+  },
   parentTop: {
     flex: 1,
     backgroundColor: "#3CB8EB",
