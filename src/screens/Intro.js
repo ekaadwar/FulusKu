@@ -75,7 +75,7 @@ const Intro = ({ navigation }) => {
         </View>
 
         <TouchableOpacity
-          onPress={() => navigation.replace("RegisterPhone")}
+          onPress={() => navigation.replace("Login")}
           style={styles.nextScreenButton}
         >
           <Circle
@@ -90,16 +90,6 @@ const Intro = ({ navigation }) => {
 export default Intro;
 
 const styles = StyleSheet.create({
-  controlButton: {
-    backgroundColor: "#2A86AC",
-    width: 40,
-    height: 40,
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 999,
-  },
   generalText: {
     color: "#FFF",
     textAlign: "left",

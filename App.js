@@ -21,45 +21,8 @@ const Router = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        component={RegisterFinish}
-        name={"RegisterFinish"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={RegisterQuestion}
-        name={"RegisterQuestion"}
-        options={{
-          header: Header,
-          headerTransparent: true,
-        }}
-      />
-      <Stack.Screen
-        component={RegisterAdvance}
-        name={"RegisterAdvance"}
-        options={{
-          header: Header,
-          headerTransparent: true,
-        }}
-      />
-      <Stack.Screen
-        component={RegisterCode}
-        name={"RegisterCode"}
-        options={{
-          header: Header,
-          headerTransparent: true,
-        }}
-      />
-      <Stack.Screen
-        component={RegisterPhone}
-        name={"RegisterPhone"}
-        options={{
-          header: Header,
-          headerTransparent: true,
-        }}
-      />
-      <Stack.Screen
-        component={Login}
-        name={"Login"}
+        component={SplashScreen}
+        name={"SplashScreen"}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -68,8 +31,33 @@ const Router = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        component={SplashScreen}
-        name={"SplashScreen"}
+        component={Login}
+        name={"Login"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={RegisterPhone}
+        name={"RegisterPhone"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={RegisterCode}
+        name={"RegisterCode"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={RegisterAdvance}
+        name={"RegisterAdvance"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={RegisterQuestion}
+        name={"RegisterQuestion"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={RegisterFinish}
+        name={"RegisterFinish"}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

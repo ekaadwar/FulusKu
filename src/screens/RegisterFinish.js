@@ -7,7 +7,7 @@ import MainButton from "../components/MainButton";
 import SpaceHorizontal from "../components/SpaceHorizontal";
 import Circle from "../components/Circle";
 
-const RegisterPhone = () => {
+const RegisterPhone = ({ navigation }) => {
   return (
     <View style={[GeneralStyle.parentTop, GeneralStyle.headerPadding]}>
       <View style={GeneralStyle.container}>

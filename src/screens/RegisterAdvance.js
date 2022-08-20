@@ -6,10 +6,12 @@ import { logoNoName } from "../assets";
 import MainInput from "../components/MainInput";
 import MainButton from "../components/MainButton";
 import SpaceHorizontal from "../components/SpaceHorizontal";
+import Header from "../components/Header";
 
-const RegisterPhone = () => {
+const RegisterPhone = ({ navigation }) => {
   return (
-    <View style={[GeneralStyle.parentTop, GeneralStyle.headerPadding]}>
+    <View style={GeneralStyle.parentTop}>
+      <Header action={() => navigation.goBack()} />
       <View style={GeneralStyle.container}>
         <Image source={logoNoName} />
         <SpaceHorizontal space={30} />
@@ -34,7 +36,11 @@ const RegisterPhone = () => {
         </Text>
         <SpaceHorizontal space={30} />
 
-        <MainButton primary text="NEXT" />
+        <MainButton
+          onPress={() => navigation.navigate("RegisterQuestion")}
+          primary
+          text="NEXT"
+        />
         <SpaceHorizontal space={30} />
       </View>
     </View>

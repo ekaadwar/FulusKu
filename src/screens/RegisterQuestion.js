@@ -18,11 +18,12 @@ import SpaceHorizontal from "../components/SpaceHorizontal";
 import Header from "../components/Header";
 import ModalOption from "../components/ModalOptions";
 
-const RegisterPhone = () => {
+const RegisterPhone = ({ navigation }) => {
   const [modalVisibility, setModalVisibility] = useState(false);
 
   return (
-    <View style={[GeneralStyle.parentTop, GeneralStyle.headerPadding]}>
+    <View style={GeneralStyle.parentTop}>
+      <Header action={() => navigation.goBack()} />
       <View style={GeneralStyle.container}>
         <Image source={logoNoName} />
         <SpaceHorizontal space={30} />
@@ -45,7 +46,11 @@ const RegisterPhone = () => {
         <MainInput placeholder="Your answer" />
         <SpaceHorizontal space={30} />
 
-        <MainButton primary text="IM READY" />
+        <MainButton
+          onPress={() => navigation.navigate("RegisterFinish")}
+          primary
+          text="IM READY"
+        />
       </View>
 
       <ModalOption

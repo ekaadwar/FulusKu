@@ -6,10 +6,12 @@ import { logoNoName } from "../assets";
 import MainInput from "../components/MainInput";
 import MainButton from "../components/MainButton";
 import SpaceHorizontal from "../components/SpaceHorizontal";
+import Header from "../components/Header";
 
-const RegisterPhone = () => {
+const RegisterPhone = ({ navigation }) => {
   return (
-    <View style={[GeneralStyle.parentTop, GeneralStyle.headerPadding]}>
+    <View style={GeneralStyle.parentTop}>
+      <Header action={() => navigation.goBack()} />
       <View style={GeneralStyle.container}>
         <Image source={logoNoName} />
         <SpaceHorizontal space={30} />
@@ -22,7 +24,11 @@ const RegisterPhone = () => {
         <MainInput placeholder="6 Digit Code" />
         <SpaceHorizontal space={30} />
 
-        <MainButton primary text="NEXT" />
+        <MainButton
+          primary
+          text="NEXT"
+          onPress={() => navigation.navigate("RegisterAdvance")}
+        />
         <SpaceHorizontal space={30} />
 
         <Text style={[GeneralStyle.mainText, styles.textCenter]}>

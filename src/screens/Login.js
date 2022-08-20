@@ -7,7 +7,7 @@ import { GeneralStyle } from "../components/GeneralStyles";
 import MainInput from "../components/MainInput";
 import SpaceHorizontal from "../components/SpaceHorizontal";
 
-const Login = () => {
+const Login = ({ navigation }) => {
   return (
     <View style={GeneralStyle.parentTop}>
       <View style={GeneralStyle.container}>
@@ -18,7 +18,11 @@ const Login = () => {
         <Text style={GeneralStyle.mainText}>Welcome to FULUSKU.</Text>
         <SpaceHorizontal space={40} />
 
-        <MainButton primary text="CREATE ACCOUNT" />
+        <MainButton
+          onPress={() => navigation.navigate("RegisterPhone")}
+          primary
+          text="CREATE ACCOUNT"
+        />
         <SpaceHorizontal space={16} />
 
         <Text style={[GeneralStyle.mainText, styles.or]}>OR</Text>
