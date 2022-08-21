@@ -10,7 +10,7 @@ import PageIndicator from "../components/PageIndicator";
 const ChangePin = ({ navigation }) => {
   return (
     <View style={GeneralStyle.parentTop}>
-      <Header action={() => navigation.goBack()} />
+      <Header title="Change PIN" action={() => navigation.goBack()} />
       <SpaceHorizontal space={20} />
       <View style={[GeneralStyle.parentTop, GeneralStyle.container]}>
         <MainInput placeholder="Enter old PIN" />

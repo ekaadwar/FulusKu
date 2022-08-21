@@ -20,12 +20,23 @@ import Header from "./src/components/Header";
 import TransactionHistory from "./src/screens/TransactionHistory";
 import Transfer from "./src/screens/Transfer";
 import ChangePin from "./src/screens/ChangePin";
+import ChangeEmail from "./src/screens/ChangeEmail";
 
 const Stack = createStackNavigator();
 
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        component={More}
+        name={"More"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={ChangeEmail}
+        name={"ChangeEmail"}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         component={ChangePin}
         name={"ChangePin"}
@@ -34,11 +45,6 @@ const Router = () => {
       <Stack.Screen
         component={EditProfile}
         name={"EditProfile"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={More}
-        name={"More"}
         options={{ headerShown: false }}
       />
       <Stack.Screen

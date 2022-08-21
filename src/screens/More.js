@@ -60,8 +60,9 @@ const Transfer = ({ navigation }) => {
           onPress={() => navigation.navigate("ChangePin")}
         />
         <ItemList
-          icon={<MaterialCom name="email-outline" color="#FFF" size={20} />}
           text="Change Email"
+          icon={<MaterialCom name="email-outline" color="#FFF" size={20} />}
+          onPress={() => navigation.navigate("ChangeEmail")}
         />
         <ItemList
           icon={<MaterialCom name="key-outline" color="#FFF" size={20} />}
