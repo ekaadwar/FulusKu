@@ -1,7 +1,13 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
-const Circle = ({ component = () => {}, size = 40, color = "#2A86AC" }) => {
+const Circle = ({
+  component = () => {},
+  size = 40,
+  color = "#2A86AC",
+  border = 0,
+  borderColor = "#FFF",
+}) => {
   const styles = StyleSheet.create({
     parent: {
       backgroundColor: color,
@@ -12,6 +18,8 @@ const Circle = ({ component = () => {}, size = 40, color = "#2A86AC" }) => {
       alignItems: "center",
       justifyContent: "center",
       borderRadius: 999,
+      borderWidth: border,
+      borderColor,
     },
   });
   return <View style={styles.parent}>{component}</View>;

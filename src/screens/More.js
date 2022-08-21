@@ -17,7 +17,7 @@ import Navbar from "../components/Navbar";
 import ItemList from "../components/ItemList";
 import Circle from "../components/Circle";
 
-const Transfer = () => {
+const Transfer = ({ navigation }) => {
   return (
     <View style={styles.canvas}>
       <ScrollView
@@ -42,12 +42,14 @@ const Transfer = () => {
           text="Upgrade Account"
         />
         <ItemList
+          text="Edit Profile"
           icon={
             <MaterialCom name="account-edit-outline" color="#FFF" size={20} />
           }
-          text="Edit Profile"
+          onPress={() => navigation.navigate("EditProfile")}
         />
         <ItemList
+          text="Change PIN"
           icon={
             <MaterialCom
               name="application-edit-outline"
@@ -55,7 +57,7 @@ const Transfer = () => {
               size={20}
             />
           }
-          text="Change PIN"
+          onPress={() => navigation.navigate("ChangePin")}
         />
         <ItemList
           icon={<MaterialCom name="email-outline" color="#FFF" size={20} />}

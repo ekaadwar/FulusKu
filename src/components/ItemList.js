@@ -4,9 +4,13 @@ import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
 import Octicons from "react-native-vector-icons/Octicons";
 import { GeneralStyle } from "./GeneralStyles";
 
-const ItemList = ({ text = "your text", icon = <View /> }) => {
+const ItemList = ({
+  text = "your text",
+  icon = <View />,
+  onPress = () => {},
+}) => {
   return (
-    <TouchableOpacity style={styles.transferItem}>
+    <TouchableOpacity style={styles.transferItem} onPress={onPress}>
       {icon}
       <Text style={[GeneralStyle.mainText, styles.itemText]}>{text}</Text>
       <Octicons name="chevron-right" color="#FFF" size={20} />

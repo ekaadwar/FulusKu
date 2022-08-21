@@ -14,16 +14,28 @@ import RegisterPhone from "./src/screens/RegisterPhone";
 import SplashScreen from "./src/screens/SplashScreen";
 import Home from "./src/screens/Home";
 import More from "./src/screens/More";
+import EditProfile from "./src/screens/EditProfile";
 import store from "./src/redux/store";
 import Header from "./src/components/Header";
 import TransactionHistory from "./src/screens/TransactionHistory";
 import Transfer from "./src/screens/Transfer";
+import ChangePin from "./src/screens/ChangePin";
 
 const Stack = createStackNavigator();
 
 const Router = () => {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        component={ChangePin}
+        name={"ChangePin"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={EditProfile}
+        name={"EditProfile"}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         component={More}
         name={"More"}
