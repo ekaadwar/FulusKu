@@ -7,7 +7,7 @@ import MainButton from "../components/MainButton";
 import SpaceHorizontal from "../components/SpaceHorizontal";
 import PageIndicator from "../components/PageIndicator";
 
-const ChangePin = ({ navigation }) => {
+const ChangeEmail = ({ navigation }) => {
   return (
     <View style={GeneralStyle.parentTop}>
       <Header title="Change Email" action={() => navigation.goBack()} />
@@ -38,4 +38,4 @@ const ChangePin = ({ navigation }) => {
   );
 };
 
-export default ChangePin;
+export default ChangeEmail;

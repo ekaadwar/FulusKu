@@ -10,7 +10,7 @@ import MainButton from "../components/MainButton";
 import SpaceHorizontal from "../components/SpaceHorizontal";
 import Navbar from "../components/Navbar";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={GeneralStyle.parentTop}>
       <View style={GeneralStyle.parentTop}>
@@ -58,7 +58,9 @@ const Home = () => {
             <SpaceHorizontal space={20} />
             <MainButton primary text="TOP UP" />
             <SpaceHorizontal space={20} />
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("TransactionHistory")}
+            >
               <Text style={[GeneralStyle.mainText, styles.transactionHistory]}>
                 Transaction History
               </Text>
@@ -68,7 +70,7 @@ const Home = () => {
         </View>
       </View>
 
-      <Navbar />
+      <Navbar navigation={navigation} />
     </View>
   );
 };

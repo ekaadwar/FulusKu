@@ -65,8 +65,9 @@ const Transfer = ({ navigation }) => {
           onPress={() => navigation.navigate("ChangeEmail")}
         />
         <ItemList
-          icon={<MaterialCom name="key-outline" color="#FFF" size={20} />}
           text="Change Security Question"
+          icon={<MaterialCom name="key-outline" color="#FFF" size={20} />}
+          onPress={() => navigation.navigate("ChangeQuestion")}
         />
         <SpaceHorizontal space={20} />
 
@@ -92,8 +93,18 @@ const Transfer = ({ navigation }) => {
           text="Privacy and Policy"
         />
         <ItemList
-          icon={<IonIcons name="log-out-outline" color="#FFF" size={20} />}
           text="Log Out"
+          icon={<IonIcons name="log-out-outline" color="#FFF" size={20} />}
+          onPress={() =>
+            navigation.reset({
+              index: 0,
+              routes: [
+                {
+                  name: "SplashScreen",
+                },
+              ],
+            })
+          }
         />
 
         <SpaceHorizontal space={50} />
@@ -136,7 +147,7 @@ const Transfer = ({ navigation }) => {
         <SpaceHorizontal space={20} />
       </ScrollView>
       <View style={styles.navbarWrap}>
-        <Navbar />
+        <Navbar navigation={navigation} />
       </View>
     </View>
   );

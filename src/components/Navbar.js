@@ -4,16 +4,16 @@ import IconSimple from "react-native-vector-icons/SimpleLineIcons";
 import IconMaterial from "react-native-vector-icons/MaterialIcons";
 import { GeneralStyle } from "./GeneralStyles";
 
-const Navbar = () => {
+const Navbar = ({ navigation }) => {
   return (
     <View style={styles.canvas}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Home")}>
         <View style={styles.menu}>
           <IconSimple name="home" color="#3CB8EB" size={20} />
           <Text style={[GeneralStyle.contentText, styles.textMenu]}>Home</Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Transfer")}>
         <View style={styles.menu}>
           <IconMaterial name="swap-horiz" color="#3CB8EB" size={20} />
           <Text style={[GeneralStyle.contentText, styles.textMenu]}>
@@ -21,7 +21,7 @@ const Navbar = () => {
           </Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("More")}>
         <View style={styles.menu}>
           <IconMaterial name="more-horiz" color="#3CB8EB" size={20} />
           <Text style={[GeneralStyle.contentText, styles.textMenu]}>More</Text>

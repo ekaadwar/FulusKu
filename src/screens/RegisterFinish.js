@@ -26,7 +26,20 @@ const RegisterPhone = ({ navigation }) => {
         </Text>
         <SpaceHorizontal space={30} />
 
-        <MainButton primary text="GET STARTED" />
+        <MainButton
+          primary
+          text="GET STARTED"
+          onPress={() =>
+            navigation.reset({
+              index: 0,
+              routes: [
+                {
+                  name: "Home",
+                },
+              ],
+            })
+          }
+        />
         <SpaceHorizontal space={30} />
       </View>
     </View>
@@ -34,9 +47,3 @@ const RegisterPhone = ({ navigation }) => {
 };
 
 export default RegisterPhone;
-
-const styles = StyleSheet.create({
-  textCenter: {
-    textAlign: "center",
-  },
-});

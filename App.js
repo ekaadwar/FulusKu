@@ -21,47 +21,13 @@ import TransactionHistory from "./src/screens/TransactionHistory";
 import Transfer from "./src/screens/Transfer";
 import ChangePin from "./src/screens/ChangePin";
 import ChangeEmail from "./src/screens/ChangeEmail";
+import ChangeQuestion from "./src/screens/ChangeQuestion";
 
 const Stack = createStackNavigator();
 
 const Router = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        component={More}
-        name={"More"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={ChangeEmail}
-        name={"ChangeEmail"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={ChangePin}
-        name={"ChangePin"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={EditProfile}
-        name={"EditProfile"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={Transfer}
-        name={"Transfer"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={Home}
-        name={"Home"}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        component={TransactionHistory}
-        name={"TransactionHistory"}
-        options={{ headerShown: false }}
-      />
       <Stack.Screen
         component={SplashScreen}
         name={"SplashScreen"}
@@ -100,6 +66,46 @@ const Router = () => {
       <Stack.Screen
         component={RegisterFinish}
         name={"RegisterFinish"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={Home}
+        name={"Home"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={TransactionHistory}
+        name={"TransactionHistory"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={Transfer}
+        name={"Transfer"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={More}
+        name={"More"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={EditProfile}
+        name={"EditProfile"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={ChangePin}
+        name={"ChangePin"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={ChangeEmail}
+        name={"ChangeEmail"}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={ChangeQuestion}
+        name={"ChangeQuestion"}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

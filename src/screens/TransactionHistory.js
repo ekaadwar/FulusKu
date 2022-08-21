@@ -5,11 +5,11 @@ import { panding, completed } from "../assets";
 import Header from "../components/Header";
 import SpaceHorizontal from "../components/SpaceHorizontal";
 
-const TransactionHistory = () => {
+const TransactionHistory = ({ navigation }) => {
   const [pendingTrans, setPendingTrans] = useState(true);
   return (
     <View style={GeneralStyle.parentTop}>
-      <Header title="Balance Activity" />
+      <Header action={() => navigation.goBack()} title="Balance Activity" />
       <View style={styles.historyMenuWrap}>
         <TouchableOpacity
           style={[

@@ -41,7 +41,19 @@ const Login = ({ navigation }) => {
         </View>
         <SpaceHorizontal space={40} />
 
-        <MainButton text="SIGN IN" />
+        <MainButton
+          text="SIGN IN"
+          onPress={() =>
+            navigation.reset({
+              index: 0,
+              routes: [
+                {
+                  name: "Home",
+                },
+              ],
+            })
+          }
+        />
       </View>
     </View>
   );

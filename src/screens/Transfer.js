@@ -5,7 +5,7 @@ import { GeneralStyle } from "../components/GeneralStyles";
 import SpaceHorizontal from "../components/SpaceHorizontal";
 import Navbar from "../components/Navbar";
 
-const Transfer = () => {
+const Transfer = ({ navigation }) => {
   return (
     <View style={GeneralStyle.parentTop}>
       <View style={[GeneralStyle.parentTop, GeneralStyle.container]}>
@@ -29,7 +29,7 @@ const Transfer = () => {
           <Octicons name="chevron-right" color="#FFF" size={20} />
         </TouchableOpacity>
       </View>
-      <Navbar />
+      <Navbar navigation={navigation} />
     </View>
   );
 };
